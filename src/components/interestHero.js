@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./InterestNav";
 import graph from "../assets/graph.svg";
+import dropdownIcon from "../assets/arrowdown.svg"; 
 
 const InterestHero = () => {
   const [frequency, setFrequency] = useState("monthly");
@@ -19,6 +20,11 @@ const InterestHero = () => {
 
   const { interest, totalSavings, totalBalance } = calculateInterest(amount, duration);
 
+  const handleInput = (e, setState) => {
+    const value = e.target.value.replace(/[^0-9]/g, '');
+    setState(value);
+  };
+
   return (
     <div className="max-w-8xl w-full mx-auto bg-interestbg bg-cover h-auto md:h-[970px]">
       <Nav />
@@ -26,10 +32,10 @@ const InterestHero = () => {
         <h1 className="font-bold text-[2.5rem] text-start mt-4 pl-2 md:pl-4 text-white">Calculate Your Interests</h1>
         <div className="flex flex-col md:flex-row justify-evenly gap-4 items-start mt-6 md:mt-0">
           <form method="post" className="w-full md:w-[45%]">
-            <div className="w-full md:w-[65%] flex flex-col items-start mb-8 gap-2">
+            <div className="w-full md:w-[65%] flex flex-col items-start mb-8 gap-2 relative">
               <label className="text-[0.95rem] text-gray-400 mt-4" htmlFor="frequency">How often are you saving?</label>
               <select
-                className="w-full mt-2 bg-transparent border outline-none border-white rounded-lg px-8 py-6 font-sans text-[0.95rem] text-white"
+                className="w-full mt-2 bg-transparent border outline-none border-white rounded-lg px-8 py-6 font-sans text-[0.95rem] text-white appearance-none"
                 name="frequency"
                 id="frequency"
                 value={frequency}
@@ -40,6 +46,7 @@ const InterestHero = () => {
                 <option value="monthly">Monthly</option>
                 <option value="yearly">Yearly</option>
               </select>
+              <img src={dropdownIcon} alt="Dropdown Icon" className="absolute right-4 bottom-3 transform -translate-y-1/2 pointer-events-none" />
             </div>
 
             <div className="w-full md:w-[65%] flex flex-col mb-8 gap-2">
@@ -50,7 +57,7 @@ const InterestHero = () => {
                 className="w-full bg-transparent border-b-2 outline-none border-white py-2 font-sans text-[2rem] text-white"
                 name="amount"
                 value={amount}
-                onChange={(e) => setAmount(Number(e.target.value))}
+                onInput={(e) => handleInput(e, setAmount)}
               />
             </div>
             <div className="w-full md:w-[65%] flex flex-col mb-8 gap-2 mt-4">
@@ -61,7 +68,7 @@ const InterestHero = () => {
                 className="w-full bg-transparent border-b-2 outline-none border-white py-2 font-sans text-[2rem] text-white"
                 name="duration"
                 value={duration}
-                onChange={(e) => setDuration(Number(e.target.value))}
+                onInput={(e) => handleInput(e, setDuration)}
               />
             </div>
           </form>
