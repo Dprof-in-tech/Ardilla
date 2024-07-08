@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/logo.svg';
-import maphero from '../assets/maphero.svg';
 import arrowdown from '../assets/arrowdown.svg';
+import maphero from '../assets/maphero.svg';
 
 const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

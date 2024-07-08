@@ -8,8 +8,8 @@ const Hero = () => {
             <Navbar />
 
             <div className="flex flex-col items-center">
-                <h1 className="text-white text-[5rem] font-bold text-center mt-10">Your Access To More</h1>
-                <p className="text-white text-center max-w-[50%]">Ardilla helps you save and invest in achieving your financial goals, we have the most flexible and seamless way to grow your funds.</p>
+                <h1 className="text-white text-[2.5rem] xl:text-[5rem] font-bold text-center mt-10">Your Access To More</h1>
+                <p className="text-white text-center xl:max-w-[50%]">Ardilla helps you save and invest in achieving your financial goals, we have the most flexible and seamless way to grow your funds.</p>
                 <div className="flex justify-center mt-8">
                     <button className="bg-[#ffffff] rounded-full px-12 py-3 text-[#240053] hover:bg-[#8807F7] hover:text-white">Get Started</button>
                 </div>
