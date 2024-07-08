@@ -71,7 +71,7 @@ const InterestHero = () => {
                 ₦{totalBalance.toLocaleString()}
               </h2>
             </div>
-            <h2 className="flex items-center gap-1 text-[0.8rem] md:text-[0.95rem] font-semibold text-gray-400">
+            <h2 className="flex w-full text-start items-center gap-1 text-[0.8rem] md:text-[0.95rem] font-semibold text-gray-400">
               Saving <p className="font-bold text-gray-500">₦{amount.toLocaleString()}</p> monthly for {duration} months will result in a balance of <p className="font-bold text-gray-500">₦{totalBalance.toLocaleString()}</p>
             </h2>
             <div className="w-full md:w-[65%] flex flex-col mb-8 mt-8">
