@@ -25,9 +25,9 @@ const images = [
 const Products = () => {
     return (
         <div className="max-w-8xl  w-full mx-auto h-[fit-content] px-4 lg:px-8 py-4">
-            <img src={productbanner} alt="Product Banner" className="mt-12"/>
+            <img loading='lazy' src={productbanner} alt="Product Banner" className="mt-12"/>
             <div className="flex self-end justify-end items-end mt-4 mb-4">
-                <img src={rightarrow} alt="Right Arrow" />
+                <img loading='lazy' src={rightarrow} alt="Right Arrow" />
             </div>
 
             <div className="flex gap-4 items-center overflow-x-auto scrollbar-hide w-full px-2 mt-4">

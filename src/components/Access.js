@@ -32,7 +32,7 @@ const Access = () => {
                         onMouseEnter={() => setButtonImage(buttonarrow)}
                         onMouseLeave={() => setButtonImage(buttonarrow)}
                     >
-                        Learn more about Savings <img src={buttonImage} alt="button arrow" />
+                        Learn more about Savings <img loading='lazy' src={buttonImage} alt="button arrow" />
                     </button>
                 </div>
             </div>

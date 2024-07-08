@@ -53,7 +53,7 @@ const InterestHero = () => {
               </h2>
             </div>
             <div className="w-full mb-8 mt-4">
-              <img src={graph} alt="graph" className="w-full h-full" />
+              <img loading='lazy' src={graph} alt="graph" className="w-full h-full" />
             </div>
             <button className="rounded-full px-12 py-4 bg-[#8807F7] hover:bg-[#3D0072]">Save now</button>
           </div>

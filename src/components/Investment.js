@@ -24,12 +24,12 @@ const Investment = () => {
                     onMouseEnter={() => setButtonImage(buttonarrow2)}
                     onMouseLeave={() => setButtonImage(buttonarrow1)}
                 >
-                    Invest with Ardilla (Coming Soon) <img src={buttonImage} alt="button arrow" />
+                    Invest with Ardilla (Coming Soon) <img loading='lazy' src={buttonImage} alt="button arrow" />
                 </button>
             </div>
 
             <div className="h-[300px] md:h-[497px] md:absolute md:top-[12rem] md:right-[6rem] mt-8 md:mt-0 flex justify-center">
-                <img src={investment} alt="investment" className="w-[90%] md:w-[743px] h-full" />
+                <img loading='lazy' src={investment} alt="investment" className="w-[90%] md:w-[743px] h-full" />
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ import footer from '../assets/footer.svg';
 const Footer = () => {
     return (
         <footer className="bg-[#8807F7] py-10 px-4 lg:px-8 relative flex flex-col items-center w-full max-w-8xl">
-            <img src={footer} alt='' className='flex w-[85%] h-auto lg:w-auto absolute -top-[4rem] lg:-top-[10rem] self-center' />
+            <img loading='lazy' src={footer} alt='' className='flex w-[85%] h-auto lg:w-auto absolute -top-[4rem] lg:-top-[10rem] self-center' />
             <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 lg:gap-8 mt-[5rem] lg:mt-[12rem] border-b border-b-gray-200">
                 <div className='flex flex-col items-start w-full md:w-[400px]'>
                     <h3 className="text-white text-[1rem] font-bold">Products</h3>
@@ -67,10 +67,10 @@ const Footer = () => {
                 <div className='flex flex-col md:flex-row justify-between items-center'>
                     <p className='text-gray-200 text-[1rem] text-start mt-4 md:mt-0'>© 2023 Ardilla. All rights reserved</p>
                     <div className='flex items-center gap-2 mt-4 md:mt-0'>
-                        <img src={instagram} alt='Instagram logo' className='w-8 h-8' />
-                        <img src={facebook} alt='Instagram logo' className='w-8 h-8' />
-                        <img src={linkedin} alt='Instagram logo' className='w-8 h-8' />
-                        <img src={twitter} alt='Instagram logo' className='w-8 h-8' />
+                        <img loading='lazy' src={instagram} alt='Instagram logo' className='w-8 h-8' />
+                        <img loading='lazy' src={facebook} alt='Instagram logo' className='w-8 h-8' />
+                        <img loading='lazy' src={linkedin} alt='Instagram logo' className='w-8 h-8' />
+                        <img loading='lazy' src={twitter} alt='Instagram logo' className='w-8 h-8' />
                     </div>
                 </div>
                 <p className='text-gray-200 text-[0.8rem] text-start mt-4 lg:mt-2'>Ardilla operates under the coorperative license of Ardilla Multipurpose Cooperative Society, LSC 18245, We provide Savings and Fixed deposit services to our users</p>

@@ -15,7 +15,7 @@ const Hero = () => {
                 </div>
 
                 <div className="flex  items-center justify-center h-[460px] lg:w-auto w-[full]">
-                    <img src={hero} alt="" />
+                    <img loading='lazy' src={hero} alt="" />
                 </div>
             </div>
         </div>
