@@ -8,7 +8,7 @@ const InterestHero = () => {
   const [duration, setDuration] = useState(3);
 
   const calculateInterest = (amount, duration) => {
-    const realAmount = paerseInt(amount)
+    const realAmount = parseInt(amount)
     const interestRate = 0.02;
     const totalSavings = realAmount * duration;
     const interest = totalSavings * interestRate;

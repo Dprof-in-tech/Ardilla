@@ -16,7 +16,7 @@ const Nav = () => {
       <div className="h-[35px] w-[100px]">
         <img loading='lazy' src={Logo} alt="logo" className="h-full" />
       </div>
-      <ul className="hidden md:flex cursor-pointer items-center justify-evenly gap-[3rem] font-bold text-white py-2 px-2 mt-2 -ml-[10%]">
+      <ul className="hidden lg:flex cursor-pointer items-center justify-evenly gap-[3rem] font-bold text-white py-2 px-2 mt-2 -ml-[10%]">
         <li className="flex items-center gap-1">Products <img loading='lazy' src={arrowdown} alt="arrowdown" /></li>
         <li className="flex items-center gap-2">Business <button className="text-[0.5rem] border border-gray-200 rounded-md px-2 py-0.5">Beta</button></li>
         <li className="flex items-center gap-1">Company <img loading='lazy' src={arrowdown} alt="arrowdown" /></li>
