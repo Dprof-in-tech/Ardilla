@@ -9,8 +9,9 @@ const InterestHero = () => {
 
   const calculateInterest = (amount, duration) => {
     const realAmount = parseInt(amount)
+    const realDuration = parseInt(duration)
     const interestRate = 0.02;
-    const totalSavings = realAmount * duration;
+    const totalSavings = realAmount * realDuration;
     const interest = totalSavings * interestRate;
     const totalBalance = totalSavings + interest;
     return { interest, totalSavings, totalBalance };
@@ -55,7 +56,7 @@ const InterestHero = () => {
             <div className="w-full md:w-[65%] flex flex-col mb-8 gap-2 mt-4">
               <label className="text-[0.95rem] text-gray-400" htmlFor="duration">How long are you saving for? (In months)</label>
               <input
-                type="number"
+                type="text"
                 placeholder='3'
                 className="w-full bg-transparent border-b-2 outline-none border-white py-2 font-sans text-[2rem] text-white"
                 name="duration"
