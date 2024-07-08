@@ -1,50 +1,58 @@
 import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/logo.svg';
-import arrowdown from '../assets/arrowdown.svg';
-import maphero from '../assets/maphero.svg';
+import map from '../assets/map.svg';
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    const handleMenuToggle = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-  return (
-    <div className='max-w-8xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between px-4 lg:px-12 py-4'>
-      <div className='w-full flex items-center justify-between lg:w-auto'>
-        <div className='h-[35px] w-[100px]'>
-          <img src={Logo} alt='Logo' className='h-full' />
-        </div>
-        <div className='lg:hidden block'>
-          <button onClick={toggleMobileMenu} className='text-white focus:outline-none'>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
-            </svg>
+    return (
+        <div className='max-w-8xl w-full mx-auto flex items-center justify-between px-4 md:px-12 py-4'>
+            <div className='h-[35px] w-[100px]'>
+                <img src={Logo} alt='logo' className='h-full' />
+            </div>
+            <div className='md:hidden'>
+                <button onClick={handleMenuToggle}>
+                    {isMenuOpen ? <FaTimes className="text-white w-8 h-8" /> : <FaBars className="text-white w-8 h-8" />}
+                </button>
+            </div>
+            <ul className='hidden md:flex items-center justify-evenly gap-[2rem] text-white py-2 px-2 mt-2 ml-[10%]'>
+                <li>Products</li>
+                <li>Business</li>
+                <li>Company</li>
+                <li>Learn</li>
+            </ul>
+
+            <div className='hidden md:flex items-center justify-evenly gap-4'>
+                <img src={map} alt='map' className='mt-2'/>
+                <button className='bg-[#8807F7] rounded-full px-8 py-3 text-white hover:bg-[#6005AE]'>Create Account</button>
+            </div>
+
+            {/* Mobile Sidebar */}
+      <div className={`fixed top-0 right-0 w-3/4 h-full bg-white z-50 transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <img src={Logo} alt="logo" className="h-[35px] w-[100px]" />
+          <button onClick={handleMenuToggle} className="text-gray-700">
+            <FaTimes size={24} />
           </button>
         </div>
-      </div>
-      <ul className={`lg:flex ${isMobileMenuOpen ? 'flex' : 'hidden'} flex-col lg:flex-row cursor-pointer items-center justify-evenly gap-4 lg:gap-[3rem] font-bold text-white py-2 px-2 lg:mt-0 mt-2`}>
-        <li className='flex items-center gap-1'>Products <img src={arrowdown} alt='arowdown' /></li>
-        <li className='flex items-center gap-2'>Business <button className='text-[0.5rem] border border-gray-200 rounded-md px-2 py-0.5'>Beta</button></li>
-        <li className='flex items-center gap-1'>Company <img src={arrowdown} alt='arowdown' /></li>
-        <li>Learn</li>
-      </ul>
+        <ul className="flex flex-col items-start p-4 gap-4 font-bold text-gray-700">
+          <li className="flex items-center gap-1">Products</li>
+          <li className="flex items-center gap-2">Business</li>
+          <li className="flex items-center gap-1">Company </li>
+          <li>Learn</li>
+        </ul>
+        <div className="flex flex-col items-start p-4 gap-4">
 
-      <div className='lg:flex items-center justify-evenly gap-4 hidden'>
-        <a href=''><p className='cursor-pointer mr-4 font-semibold text-white'>Sign in</p></a>
-        <button className='bg-[#FFFFFF] rounded-full px-8 py-3 text-[#3D0072] hover:bg-[#6005AE] hover:text-white cursor-pointer font-semibold'>Create Account</button>
-        <img src={maphero} alt='' className='mt-2' />
-      </div>
-      {isMobileMenuOpen && (
-        <div className='lg:hidden flex flex-col items-center justify-evenly gap-4 mt-4'>
-          <a href=''><p className='cursor-pointer font-semibold text-white'>Sign in</p></a>
-          <button className='bg-[#FFFFFF] rounded-full px-8 py-3 text-[#3D0072] hover:bg-[#6005AE] hover:text-white cursor-pointer font-semibold'>Create Account</button>
-          <img src={maphero} alt='' className='mt-2' />
+          <button className="bg-[#3D0072] rounded-full px-8 py-3 text-white hover:bg-[#6005AE] cursor-pointer font-semibold">Create Account</button>
         </div>
-      )}
-    </div>
-  );
-};
+      </div>
+        </div>
+    );
+}
 
 export default Navbar;

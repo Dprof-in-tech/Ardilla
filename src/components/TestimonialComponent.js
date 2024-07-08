@@ -3,7 +3,7 @@ import playButton from '../assets/playbutton.svg';
 
 const TestimonialCard = ({ image, name, description }) => {
   return (
-    <div className="relative cursor-pointer group w-[381.72px] hover:w-[523.87px] h-[340.19px] hover:h-[454.52px] overflow-hidden rounded-xl transform transition-transform duration-500">
+    <div className="relative cursor-pointer group w-[85%] hover:w-full md:w-[381.72px] md:hover:w-[523.87px] h-[340.19px] hover:h-[454.52px] overflow-hidden rounded-xl transform transition-transform duration-500">
       <img className="w-full h-full rounded-xl object-cover" src={image} alt={name} />
       <div className="absolute inset-0 w-full h-full bg-black bg-opacity-50 opacity-0 transform transition-opacity duration-500 ease-in-out group-hover:opacity-100 flex items-center justify-center">
         <img src={playButton} alt="Play" className="w-[50px] h-[50px]" />
