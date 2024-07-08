@@ -17,11 +17,11 @@ const Access = () => {
     return (
         <div className="max-w-8xl  w-full mx-auto bg-access-bg bg-cover h-[fit-content] px-16 flex flex-col items-center">
 
-            <div className="flex flex-col items-start px-6 py-4">
-                <h1 className="text-white text-[5rem] font-bold text-start mt-10">
+            <div className="flex flex-col items-start xl:px-6 py-4">
+                <h1 className="text-white text-[2.5rem] xl:text-[5rem] font-bold text-start mt-10">
                     Access More With Your Money
                 </h1>
-                <p className="text-gray-200 text-[0.95rem] text-start max-w-[65%]">
+                <p className="text-gray-200 text-[0.95rem] text-start xl:max-w-[65%]">
                     Earn, learn, parlay, and grow financially. With Ardilla, you have more opportunities than ever at your finger tips. Why not take advantage today?
                 </p>
                 <div className="flex justify-center mt-8">
